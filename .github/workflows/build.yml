@@ -33,6 +33,10 @@ jobs:
       - name: Install docfx
         run: |
           dotnet tool install docfx -g
+      # Run `docfx metadata` command
+      - name: Generate metadata
+        run: |
+          docfx metadata
       # Run `docfx build` command
       - name: Build document
         run: |
